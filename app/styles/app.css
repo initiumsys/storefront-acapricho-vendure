@@ -988,6 +988,10 @@ button:disabled {
   display: inline-flex;
 }
 
+#app .table {
+  display: table;
+}
+
 #app .flow-root {
   display: flow-root;
 }
@@ -1193,6 +1197,26 @@ button:disabled {
   flex-basis: 33.333333%;
 }
 
+#app .table-auto {
+  table-layout: auto;
+}
+
+#app .border-separate {
+  border-collapse: separate;
+}
+
+#app .border-spacing-2 {
+  --tw-border-spacing-x: 0.5rem;
+  --tw-border-spacing-y: 0.5rem;
+  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+}
+
+#app .border-spacing-1 {
+  --tw-border-spacing-x: 0.25rem;
+  --tw-border-spacing-y: 0.25rem;
+  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+}
+
 #app .translate-x-full {
   --tw-translate-x: 100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1269,6 +1293,18 @@ button:disabled {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+
+#app .list-inside {
+  list-style-position: inside;
+}
+
+#app .list-none {
+  list-style-type: none;
+}
+
+#app .list-disc {
+  list-style-type: disc;
 }
 
 #app .appearance-none {
@@ -1608,6 +1644,16 @@ button:disabled {
 #app .border-green-600 {
   --tw-border-opacity: 1;
   border-color: rgb(22 163 74 / var(--tw-border-opacity));
+}
+
+#app .border-slate-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(148 163 184 / var(--tw-border-opacity));
+}
+
+#app .border-slate-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(203 213 225 / var(--tw-border-opacity));
 }
 
 #app .bg-red-50 {
@@ -2006,6 +2052,10 @@ button:disabled {
 
 #app .text-center {
   text-align: center;
+}
+
+#app .text-justify {
+  text-align: justify;
 }
 
 #app .text-end {
@@ -2451,6 +2501,10 @@ button:disabled {
   margin-top: 0.5rem;
 }
 
+#app .hover\:list-disc:hover {
+  list-style-type: disc;
+}
+
 #app .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -2661,6 +2715,11 @@ button:disabled {
   #app .dark\:text-gray-100 {
     --tw-text-opacity: 1;
     color: rgb(243 244 246 / var(--tw-text-opacity));
+  }
+
+  #app .dark\:text-gray-400 {
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
   }
 }
 

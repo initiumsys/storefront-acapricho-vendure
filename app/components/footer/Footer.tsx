@@ -10,6 +10,7 @@ const navigation = {
   ],
   company: [
     { name: 'Sobre Nosotros', href: '#' },
+    { name: 'Política de privacidad', href: '/politica-privacidad' },
     { name: 'Blog', href: '#' },
     { name: 'Responsabilidad Corporativa', href: '#' },
     { name: 'Prensa', href: '#' },

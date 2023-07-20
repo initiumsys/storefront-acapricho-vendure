@@ -38,7 +38,7 @@ export function Header({
             </p>
           </div> */}
           <div>
-            <p className="hidden sm:block">Tienda de Alberto</p>
+            <p className="hidden sm:block">Tienda de A Capricho Catering</p>
           </div>
           <div>
             <Link
