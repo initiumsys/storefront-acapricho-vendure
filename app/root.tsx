@@ -108,6 +108,17 @@ export default function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta property="og:title" content="A Capricho Catering - Tienda -" />
+        <meta
+          property="og:description"
+          content="Tienda de A Capricho Catering"
+        />
+        <meta
+          property="og:image"
+          itemprop="image"
+          content="https://api_tienda.initiumsys.com/assets/preview/00/acapricho_header__preview.jpg?w=300&h=300"
+        ></meta>
+        <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" type="image/png"></link>
         <Meta />
         <Links />
@@ -144,12 +155,10 @@ export default function App() {
   );
 }
 
-
-
 type DefaultSparseErrorPageProps = {
-  tagline: string
-  headline: string
-  description: string
+  tagline: string;
+  headline: string;
+  description: string;
 };
 /**
  * You should replace this in your actual storefront to provide a better user experience.
@@ -157,7 +166,11 @@ type DefaultSparseErrorPageProps = {
  * for your data dependant components in case your shop instance / CMS isnt responding.
  * See: https://remix.run/docs/en/main/route/error-boundary
  */
-function DefaultSparseErrorPage({ tagline, headline, description }: DefaultSparseErrorPageProps) {
+function DefaultSparseErrorPage({
+  tagline,
+  headline,
+  description,
+}: DefaultSparseErrorPageProps) {
   return (
     <html lang="en" id="app">
       <head>
@@ -169,9 +182,15 @@ function DefaultSparseErrorPage({ tagline, headline, description }: DefaultSpars
       </head>
       <body>
         <main className="flex flex-col items-center px-4 py-16 sm:py-32 text-center">
-          <span className="text-sm font-semibold text-gray-500 uppercase tracking-wide">{tagline}</span>
-          <h1 className="mt-2 font-bold text-gray-900 tracking-tight text-4xl sm:text-5xl">{headline}</h1>
-          <p className="mt-4 text-base text-gray-500 max-w-full break-words">{description}</p>
+          <span className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+            {tagline}
+          </span>
+          <h1 className="mt-2 font-bold text-gray-900 tracking-tight text-4xl sm:text-5xl">
+            {headline}
+          </h1>
+          <p className="mt-4 text-base text-gray-500 max-w-full break-words">
+            {description}
+          </p>
           <div className="mt-6">
             <Link
               to="/"
@@ -193,10 +212,10 @@ function DefaultSparseErrorPage({ tagline, headline, description }: DefaultSpars
  * As mentioned in the jsdoc for `DefaultSparseErrorPage` you should replace this to suit your needs.
  */
 export function ErrorBoundary() {
-  let tagline = "Oopsy daisy";
-  let headline = "Unexpected error";
+  let tagline = 'Oopsy daisy';
+  let headline = 'Unexpected error';
   let description = "We couldn't handle your request. Please try again later.";
-  
+
   const error = useRouteError();
   if (isRouteErrorResponse(error)) {
     tagline = `${error.status} error`;
@@ -204,7 +223,13 @@ export function ErrorBoundary() {
     description = error.data;
   }
 
-  return <DefaultSparseErrorPage tagline={tagline} headline={headline} description={description} />;
+  return (
+    <DefaultSparseErrorPage
+      tagline={tagline}
+      headline={headline}
+      description={description}
+    />
+  );
 }
 
 /**
