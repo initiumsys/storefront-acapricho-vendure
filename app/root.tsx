@@ -116,7 +116,7 @@ export default function App() {
         <meta
           property="og:image"
           itemprop="image"
-          content="https://api_tienda.initiumsys.com/assets/preview/00/acapricho_header__preview.jpg?w=300&h=300"
+          content="https://tienda.acapricho.com/acapricho_header.jpg"
         ></meta>
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" type="image/png"></link>
